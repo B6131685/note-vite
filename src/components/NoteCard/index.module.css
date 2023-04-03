@@ -1,0 +1,84 @@
+.conatainer[data-style='listNote']{
+    --bg: rgb(216, 184, 0);
+    --bg-scroll: rgb(47, 100, 102);
+    --white: #FFF;
+}
+
+.conatainer[data-style='createNote']{
+    --bg: cadetblue;
+    --bg-scroll: rgb(47, 100, 102);
+    --white: #FFF;
+}
+
+
+.conatainer {
+    border-radius: 15px;
+    width: 300px;
+    min-height: 240px;
+    background-color: var(--bg);
+    padding: 20px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 25px;
+}
+
+
+textarea{
+    resize:none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    height: 100%;
+    width: 100%;
+}
+
+textarea::selection {
+    color: var(--bg-scroll);
+    background: var(--white);
+}
+
+
+/* custom scrollbar */
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--bg-scroll);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
+textarea:disabled{
+    color:black
+}
+
+/* icon */
+footer{  
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+i{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.35s ease;
+}
+
+i:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+#addIcon{
+    background-color: red;
+}
+
+.control{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
